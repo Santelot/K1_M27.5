@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1 - M27.5 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M27.5 - SCAMPER</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 2 "Code Squad" y saluda a los niños mientras muestras el equipo de Code Squad, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! ¡Qué alegría tenerlos de vuelta para otra misión musical! Hoy vamos a usar la 'M' de SCAMPER, que significa Modificar, para transformar unas hermosas guitarras. Vamos a poner a prueba nuestra creatividad y vamos a ayudar a un artesano a hacerlas aún más especiales. ¡Pero antes, vamos a mover el esqueleto con el baile de SCAMPER! ¿Listos para rockear?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_scamper')">
+                <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+            </div>
+            <div id="baile_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños con estos pasos para aplicar SCAMPER al baile:
+                            <ul>
+                                <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                                <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                                <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                                <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                                <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                                <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                                <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                            </ul>
+                        </td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡A moverse, CODE SQUAD! Síganme para aprender a bailar al ritmo de SCAMPER. No se preocupen si no sale perfecto al principio, ¡lo importante es divertirnos y calentar nuestros motores creativos!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+                <div class="subtitle">Introduce la historia de Doña Elena y sus guitarras de Paracho.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 4 "Desafío de Innovación" e introduce el video de las guitarras de Paracho, Michoacán.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy tenemos una misión llena de música y color. Vamos a ayudar a Doña Elena, una talentosa artesana que hace unas guitarras hermosísimas en Paracho, Michoacán. ¡Vamos a conocer su historia y a ver cómo podemos modificar sus guitarras para hacerlas aún más especiales!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 5 "Video Guitarras de Paracho" y al final haz algunas preguntas para asegurarte de que todos entendieron el reto.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Increíble, verdad! Ya conocimos a Doña Elena y sus guitarras mágicas. Ahora, antes de empezar a crear, vamos a confirmar que todos estamos en la misma sintonía. ¿En qué estado de México hace Doña Elena sus guitarras? (Esperar respuestas). ¡Así es, Michoacán! ¿Y de qué están hechas principalmente las guitarras? (Esperar respuestas). ¡Exacto, de madera! ¿Y qué vamos a hacer hoy con las guitarras? (Esperar respuestas). ¡Vamos a modificarlas para hacerlas aún más geniales! ¿Y qué letra de SCAMPER nos ayudará en esta misión? (Esperar respuestas). ¡La 'M' de Modificar! ¡A afinar nuestras ideas!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('introduccion_scamper')">
+                <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Explica cómo hacer preguntas de innovación con "Modificar".</div>
+            </div>
+            <div id="introduccion_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 "M de Modificar" y explica cómo hacer preguntas de innovación con "Modificar".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, hoy vamos a usar una palabra mágica: Modificar! ¿Recuerdan qué significa? ¡Significa cambiar algo para que sea diferente, mejor o más divertido! Podemos Modificar el color, el tamaño, la forma... ¡lo que se nos ocurra! Ahora vamos a aprender una fórmula secreta para hacer preguntas y descubrir nuevas ideas para las guitarras de Doña Elena. ¡Prepárense para la creatividad!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('metodologia_qtf')">
+                <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+            </div>
+            <div id="metodologia_qtf" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Paso 1 Metodología QTF" y presenta el estímulo para hacer preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Perfecto, CODE SQUAD! ¿Recuerdan de qué están hechas las guitarras de Doña Elena? (Esperar respuestas). ¡Así es, de madera! Ahora vamos a usar nuestra fórmula mágica de Modificar para hacernos preguntas y transformar esas guitarras.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Fórmula Preguntas" y explica cómo el CODE SQUAD puede hacerse preguntas para ayudar a Doña Elena.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Atención, genios! Aquí está la fórmula secreta de Modificar: "¿Qué podemos Modificar de [parte de la guitarra] para que sea [nueva característica/función]?" Por ejemplo, podríamos preguntar: "¿Qué podemos Modificar de las cuerdas de la guitarra para que brillen en la oscuridad?". ¡Imaginen las posibilidades! ¡Ahora es su turno de crear preguntas asombrosas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (3 minutos):</strong> Reproduce la DIAPOSITIVA 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas iniciales de modificación. Si hay bloqueo, sugiere que piensen en diferentes partes de las guitarras (caja de resonancia, mástil, cuerdas) o en características que podrían añadir. Anota sus preguntas en el pizarrón.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Grandioso, CODE SQUAD! Ahora, usemos la fórmula para crear preguntas que nos inspiren a modificar las guitarras de Doña Elena. ¿Qué tal si pensamos en Modificar la forma de la guitarra? ¿O si le añadimos luces? ¿O si cambiamos los colores? ¡Escribamos todas nuestras ideas en el pizarrón para tener un montón de opciones!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Reproduce la DIAPOSITIVA 10 "Mejorar preguntas" explica la manera en la que podemos mejorar las preguntas que ya hicimos.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Impresionante, genios! Hicieron preguntas muy interesantes, pero ¿podemos hacerlas aún más precisas? Recordemos la diferencia entre una pregunta general y una específica. En lugar de preguntar "¿Qué podemos modificar de la guitarra?", podemos preguntar "¿Qué podemos modificar de la caja de resonancia de la guitarra para que suene como un tambor?". ¡A darle un toque de detalle a nuestras preguntas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (3 minutos):</strong> Reproduce la DIAPOSITIVA 11 "Ejemplo Pregunta Específica" da un ejemplo de pregunta específica y facilita el proceso para que los niños tomen las preguntas que ya hicieron y las vayan haciendo específicas. Ve agotando las preguntas una a una y anota las nuevas preguntas de los genios en el pizarrón.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Manos a la obra! Revisemos una de nuestras preguntas: "¿Qué podemos modificar en las cuerdas de la guitarra?". ¿Cómo podemos hacerla más específica? ¿Qué tal si preguntamos: "¿Qué podemos modificar en las cuerdas de la guitarra para que cambien de color al tocar?". ¡Vamos a pulir cada pregunta para que nuestras ideas sean aún más brillantes!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6 -->
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('prototipado_guitarras')">
+                <div class="title">🖍️ Actividad 6: Prototipado en Papel de Guitarras ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Aplica las preguntas formuladas en el diseño de las guitarras.</div>
+            </div>
+            <div id="prototipado_guitarras" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 12 "Innovando Guitarras" y explica que aplicaremos las preguntas para crear nuevos diseños de guitarras.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Llegó el momento de la verdad, CODE SQUAD! Vamos a usar todas esas preguntas geniales para dibujar nuestras propias guitarras modificadas. ¡Dejen volar su imaginación y creen diseños asombrosos!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 13 "Entregar Materiales" y distribuye los materiales. Asegúrate de que todos los niños tengan papel y colores para dibujar.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Aquí están sus herramientas de creación, genios! Papel, colores, ¡todo lo que necesitan para hacer magia con las guitarras de Doña Elena!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la DIAPOSITIVA 14 "Diseñar Guitarra" y guía a los niños a dibujar sus guitarras modificadas paso a paso, usando las preguntas que crearon.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos a empezar a diseñar! ¿Qué parte de la guitarra quieren modificar primero? ¿El cuerpo, las cuerdas, el mástil? ¡Dibújenlo con todos los detalles y colores que se les ocurran! ¡No hay límites para la creatividad!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7 -->
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+                <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Presenta la adición de tecnología al reto.</div>
+            </div>
+            <div id="presentacion_tecnologia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 15 "Presentación de Tecnología" y explica la adición de la tecnología de pintura que brilla en la oscuridad a las guitarras de Doña Elena.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Atención, CODE SQUAD! Ahora vamos a añadir un toque mágico a nuestras guitarras. ¿Qué les parecería si pudiéramos usar pintura que brilla en la oscuridad? ¡Imaginen las guitarras de Doña Elena iluminando la noche con música!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (2 minutos):</strong> Reproduce la DIAPOSITIVA 16 "Video de Pintura que Brilla en la Oscuridad" y al final facilita preguntas para comprobar que entendieron bien la tecnología.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Asombroso, verdad! Ahora que vimos cómo funciona la pintura que brilla en la oscuridad, repasemos un poco. ¿Qué necesita esta pintura para brillar? (Esperar respuestas). ¡Así es, necesita luz primero! ¿Y dónde podríamos usarla en las guitarras? (Esperar respuestas). ¡En el cuerpo, en el mástil, en los dibujos! ¡Las posibilidades son infinitas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Reproduce la DIAPOSITIVA 17 "Guitarras con Pintura que Brilla" y muestra ejemplos de guitarras que utilizan pintura que brilla en la oscuridad.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Miren estas guitarras que brillan en la oscuridad! ¿Ven cómo la pintura ilumina los diseños y las hace aún más especiales? ¡Podemos hacer lo mismo con las guitarras de Doña Elena!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la DIAPOSITIVA 18 "Integración de Tecnología" y guía a los niños para pensar cómo incorporar la tecnología en sus propios diseños.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, piensen en cómo usarían la pintura que brilla en la oscuridad en sus diseños. ¿Qué dibujos harían? ¿Qué partes de la guitarra iluminarían? ¡Dejen volar su imaginación y hagan que sus guitarras brillen con todo su esplendor!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_guitarras')">
+                <div class="title">🎨 Actividad 8: Presentación de Guitarras ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Organiza la presentación de las guitarras en grupos de 3.</div>
+            </div>
+            <div id="presentacion_guitarras" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (3 minutos):</strong> Reproduce la DIAPOSITIVA 19 "Presentación Guitarras" y organiza a los niños en grupos de 3 para que presenten sus guitarras al equipo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Llegó el gran momento, CODE SQUAD! Vamos a formar grupos de tres y cada uno mostrará su guitarra modificada. Expliquen qué partes modificaron, cómo usaron la pintura que brilla en la oscuridad y por qué sus diseños son únicos. ¡A compartir nuestra creatividad con el mundo!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 9 -->
+        <div id="activity-9" class="activity">
+            <div class="banner" onclick="toggleContent('conclusion_historia')">
+                <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+            </div>
+            <div id="conclusion_historia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 20 "Conclusión y Cierre" y felicita al CODE SQUAD por su trabajo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, lo hicieron increíble! Doña Elena está muy agradecida con todas sus ideas geniales para modificar sus guitarras. Con su creatividad, han transformado las guitarras en objetos mágicos y llenos de luz. ¡Sigan así, genios, el mundo necesita su ingenio! ¡Nos vemos en la próxima misión!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
